@@ -8,6 +8,10 @@ Windows>Preferences>Java>Editor>Content Assist>"Insert best guessed arguments" o
 ### Format
 [Strg] + [Shift] + [F]
 
+### Optimize Inports
+
+[Strg] + [Shift] + [O]
+
 ### Important Notes
 
 * Only send forms with POST
