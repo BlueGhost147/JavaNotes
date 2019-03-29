@@ -22,27 +22,28 @@ immer Secure / HTTPonly attribut setzten -> benötigt HTTPS
 ## Servlet 
 
 ### CodeSnippets
-processRequest(request, response);
+
+`processRequest(request, response);
 RequestDispatcher rd = request.getRequestDispatcher("departmentView.jsp");
-rd.forward(request, response);
+rd.forward(request, response);`
 
-HttpSession session = request.getSession();
+`HttpSession session = request.getSession();`
 
-response.addCookie(null);
+`response.addCookie(null);`
 	
-Integer.parseInt((String) request.getParameter("num1"));
+`Integer.parseInt((String) request.getParameter("num1"));`
 
-request.setAttribute("result", result);
+`request.setAttribute("result", result);`
 
 ## JSP
-	<%@include file="./index.jsp" %>
+`<%@include file="./index.jsp" %>`
 
-	${param.num1} + ${param.num2} = ${result}
+`${param.num1} + ${param.num2} = ${result}`
 
 
 ### ErrorPages
 #### JSP
-<%@ page isErrorPage="true" %>
+`<%@ page isErrorPage="true" %>`
 
 #### web.xml
 `
@@ -53,7 +54,7 @@ request.setAttribute("result", result);
 `
 
 ## Thymeleaf
-	Never use unescaped Text -> utext !
+Never use unescaped Text -> utext !
 
 
 ## Sets
