@@ -14,6 +14,19 @@ Windows>Preferences>Java>Editor>Content Assist>"Insert best guessed arguments" o
 * Always use the name to identify a button (because of translations)
 * use the teamname as root package name
 
+## Iterator
+Handles collection in an optional way
+Provides a remove methode -> no ConcModExc
+`
+Iterator<int> it = myList.iterator();
+
+while(it.hasNext())
+{
+	int = myNum = it.next();
+	(...)
+}
+`
+
 ## HTTP
 
 ### Cookies 
