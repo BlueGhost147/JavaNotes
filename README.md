@@ -3,25 +3,25 @@
 ## Eclipse
 
 ### Setup
-Windows>Preferences>Java>Editor>Content Assist>"Insert best guessed arguments" on
+Windows > Preferences > Java > Editor > Content Assist > "Insert best guessed arguments" on
 
 ### Format
 [Strg] + [Shift] + [F]
 
 ### Optimize Inports
-
 [Strg] + [Shift] + [O]
 
 ### Important Notes
-
 * Only send forms with POST
 * Always use the name to identify a button (because of translations)
 * use the teamname as root package name
 
+
 ## Iterator
 Handles collection in an optional way
 Provides a remove methode -> no ConcModExc
-`
+
+```java
 Iterator<int> it = myList.iterator();
 
 while(it.hasNext())
@@ -29,58 +29,66 @@ while(it.hasNext())
 	int = myNum = it.next();
 	(...)
 }
-`
+```
 
 ## Utility Class
 Collections Class
 
 ## HTTP
+### Cookies
+always set Secure / HTTPonly attribute -> requires HTTPS
 
-### Cookies 
-immer Secure / HTTPonly attribut setzten -> benötigt HTTPS
-
-## Servlet 
-
+## Servlet
 ### CodeSnippets
 
-`processRequest(request, response);
+```java
+processRequest(request, response);
 RequestDispatcher rd = request.getRequestDispatcher("departmentView.jsp");
-rd.forward(request, response);`
+rd.forward(request, response);
+return;
+```
 
-`HttpSession session = request.getSession();`
+```java
+HttpSession session = request.getSession();
+```
 
-`response.addCookie(null);`
-	
-`Integer.parseInt((String) request.getParameter("num1"));`
+```java
+response.addCookie(null);
+```
 
-`request.setAttribute("result", result);`
+```java
+Integer.parseInt((String) request.getParameter("num1"));
+```
+
+```java
+request.setAttribute("result", result);
+```
 
 ## JSP
-`<%@include file="./index.jsp" %>`
+```java
+<%@include file="./index.jsp" %>
+```
 
-`${param.num1} + ${param.num2} = ${result}`
-
+```java
+${param.num1} + ${param.num2} = ${result}
+```
 
 ### ErrorPages
 #### JSP
-`<%@ page isErrorPage="true" %>`
+```java
+<%@ page isErrorPage="true" %>
+```
 
 #### web.xml
-`
+```xml
 <error-page>
 	<exception-type>java.lang.Exception</exception-type>
 	<location>/showError.jsp</location>
 </error-page>
-`
+```
 
 ## Thymeleaf
 Never use unescaped Text -> utext !
 
-
 ## Sets
 `mySet.add --> Returns a boolean (added successfully)`
-
-
-
-
-
