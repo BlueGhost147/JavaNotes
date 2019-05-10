@@ -145,7 +145,16 @@ private long version;
 ### @Embedded
 performance??
 ### @AttributeOverrides
-???
+```java
+@Embedded
+	@AttributeOverrides({
+		@AttributeOverride(name = "street", column = @Column(name = "delivery_street")),
+		@AttributeOverride(name = "city", column = @Column(name = "delivery_city")),
+		@AttributeOverride(name = "country", column = @Column(name = "delivery_country")),
+		@AttributeOverride(name = "zip", column = @Column(name = "delivery_zip")) 
+	})
+Address deliveryAddress;
+```
 ### @ManyToOne
 ```java
 @ManyToOne(cascade = CascadeType.PERSIST)
