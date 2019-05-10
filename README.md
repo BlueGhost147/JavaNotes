@@ -107,7 +107,54 @@ Application won´t start if the DB changed, won´t apply changes to the db on st
 ### @Controller
 ### @RequestMapping("\index")
 ## Spring - Hibernate
-### @Transactional
+### Class
+#### @Entity
+```java
+@Entity
+class MyClass {...}
+```
+#### @Table(name="TableName")
+```java
+@Entity
+@Table(name="TableName")
+class MyClass {...}
+```
+### Attribute
+#### @Id
+```java
+@Id
+@Column(name="empId")
+private int id;
+```
+#### @Column(name="name", nullable=true, lenght=100)
+```java
+@Column(name="empName",nullable=false,lenght=100)
+private String name;
+```
+#### @Temporal(TemporalType.DATE)
+```java
+@Temporal(TemporalType.DATE)
+private Date dayOfBirth
+```
+#### @Version
+Prevents datalose if data is overriden
+```java
+@Version
+private long version;
+```
+### @Embedded
+performance??
+### @AttributeOverrides
+???
+### @ManyToOne
+```java
+@ManyToOne(cascade = CascadeType.PERSIST)
+private MyClass myobj;
+```
+CascadeType.PERSIST --> Save the object if it doesn´t exist
+### @ManyToMany
+### Other
+#### @Transactional
 Changes will start a transaction, the transaction is DB sided
 
 
