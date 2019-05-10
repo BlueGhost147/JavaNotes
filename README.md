@@ -1,97 +1,29 @@
 # SWENG
 
-## Eclipse
+This repository is a collection of important notes, code snippets, configuration, best practises and quirks for Java projects created in Eclipse.
 
-### Setup
-Windows > Preferences > Java > Editor > Content Assist > "Insert best guessed arguments" on
+[Eclipse documentation](Eclipse.md)
 
-### Format
-[Strg] + [Shift] + [F]
+[Java documentation](Java.md)
 
-### Optimize Inports
-[Strg] + [Shift] + [O]
+[Template engines documentation](TemplateEngines.md)
 
-### Important Notes
+
+## Important Notes
 * Only send forms with POST
 * Always use the name to identify a button (because of translations)
 * use the teamname as root package name
+* Try to avoid the use of unescaped Text whenever possible -> utext !
 
-
-## Iterator
-Handles collection in an optional way
-Provides a remove methode -> no ConcModExc
-
-```java
-Iterator<int> it = myList.iterator();
-
-while(it.hasNext())
-{
-	int = myNum = it.next();
-	(...)
-}
-```
 
 ## Utility Class
 Collections Class
+
 
 ## HTTP
 ### Cookies
 always set Secure / HTTPonly attribute -> requires HTTPS
 
-## Servlet
-### CodeSnippets
-
-```java
-processRequest(request, response);
-RequestDispatcher rd = request.getRequestDispatcher("departmentView.jsp");
-rd.forward(request, response);
-return;
-```
-
-```java
-HttpSession session = request.getSession();
-```
-
-```java
-response.addCookie(null);
-```
-
-```java
-Integer.parseInt((String) request.getParameter("num1"));
-```
-
-```java
-request.setAttribute("result", result);
-```
-
-## JSP
-```java
-<%@include file="./index.jsp" %>
-```
-
-```java
-${param.num1} + ${param.num2} = ${result}
-```
-
-### ErrorPages
-#### JSP
-```java
-<%@ page isErrorPage="true" %>
-```
-
-#### web.xml
-```xml
-<error-page>
-	<exception-type>java.lang.Exception</exception-type>
-	<location>/showError.jsp</location>
-</error-page>
-```
-
-## Thymeleaf
-Never use unescaped Text -> utext !
-
-## Sets
-`mySet.add --> Returns a boolean (added successfully)`
 
 # Other
 ## Hibernate - hbm2ddl.auto
@@ -165,5 +97,3 @@ CascadeType.PERSIST --> Save the object if it doesn´t exist
 ### Other
 #### @Transactional
 Changes will start a transaction, the transaction is DB sided
-
-
