@@ -92,3 +92,22 @@ Never use unescaped Text -> utext !
 
 ## Sets
 `mySet.add --> Returns a boolean (added successfully)`
+
+# Other
+## Hibernate - hbm2ddl.auto
+#### create-drop
+delete DB and recreate it on startup, perfect for testing
+#### update
+try' to apply changes to the db, may not work
+#### validate
+Application won´t start if the DB changed, won´t apply changes to the db on startup
+
+# Important Anotations
+## Spring
+### @Controller
+### @RequestMapping("\index")
+## Spring - Hibernate
+### @Transactional
+Changes will start a transaction, the transaction is DB sided
+
+
